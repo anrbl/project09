@@ -1,0 +1,51 @@
+.main_ticket {
+    background: $c-wb;
+
+    .content {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: $gap;
+        }
+    }
+}
+
+
+.main_notice {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 350rem;
+        gap: $gap;
+
+        .not_left {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: $gap;
+        }
+
+        .not_right {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+
+            li {
+                outline: 1px solid $c-line;
+
+                a {
+                    display: block;
+                    padding: 20rem;
+                    height: 100rem;
+
+                    img {
+                        width: 150rem;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main_snscon {
+    background: $c-wb;
+}

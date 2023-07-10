@@ -1,0 +1,70 @@
+.footer {
+    padding: 50rem 0 70rem 0;
+    border-top: 1px solid $c-line;
+
+    .ft {
+        margin: 0 0 40rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .foot_logo {
+            display: flex;
+            align-items: center;
+            gap: $gap;
+
+            &>li {
+                &>a {
+                    img {
+                        width: 250rem;
+                    }
+                }
+            }
+        }
+
+        .foot_customer {
+            display: flex;
+            gap: $gap;
+
+            &>li {
+                color: $c-4;
+            }
+
+            .strong {
+                font-size: 18rem;
+                font-weight: 500;
+                color: $c-2;
+            }
+        }
+    }
+
+    .fb {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .foot_info {
+            display: flex;
+            flex-direction: column;
+            gap: 10rem;
+
+            .copy {
+                font-size: 14rem;
+                color: $c-9;
+            }
+        }
+
+        .foot_sns {
+            display: flex;
+            gap: 10rem;
+
+            i {
+                padding: 10rem;
+                background: $c-2;
+                color: $c-w;
+                border-radius: 50%;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.main_theater {
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: $gap;
+        padding: 0 15rem;
+
+        figure {
+
+            figcaption {
+                padding: 30rem 20rem;
+                background: $c-wb;
+
+                h3 {
+                    font-size: 18rem;
+                    font-weight: 500;
+                    line-height: 24rem;
+                    color: $c-4;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+// mixin + variable
+
+
+//variable
+
+$c-w : #fff;
+$c-wb : #f9f8f7;
+$c-line : #f2f2f2;
+$c-9 : #999;
+$c-6 : #666;
+$c-4 : #444;
+$c-3 : #333;
+$c-2 : #222;
+$c-b : #000;
+$c-main : #d2a5fa;
+$c-sub : #ffeb32;
+$c-point : #ff9b46;
+
+$gap : 30rem;
+$max : 1200rem;
+
+
+
+// 이너
+@mixin inner () {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15rem;
+}
+
+// 센터
+@mixin pcen () {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// section
+@mixin sec () {
+    padding: 100rem 0;
+}
+
+@mixin blind () {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+@mixin tit () {
+    max-width: 1200px;
+    margin: 0 auto 38px auto;
+    padding: 0 15px;
+}
+
+@mixin btn() {
+    display: block;
+    padding: 10rem 20rem 8rem 20rem;
+    background: $c-2;
+    color: $c-main;
+}

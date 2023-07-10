@@ -1,0 +1,48 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: $c-w;
+    border-bottom: 1px solid $c-line;
+
+    .head_wrap {
+        height: 100rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            img {
+                width: 300rem;
+            }
+        }
+    }
+}
+
+.gnb {
+    &>ul {
+        display: flex;
+        gap: 40rem;
+
+        &>li {
+            position: relative;
+
+            &>a {
+                line-height: 100rem;
+            }
+
+            .sub {
+                position: absolute;
+                top: 100rem;
+                left: 0;
+                display: none;
+            }
+
+            &:hover {
+                .sub {
+                    display: block;
+                }
+            }
+        }
+    }
+}
