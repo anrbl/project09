@@ -84,11 +84,18 @@
         <main role="main">
             <!-- 01 mainVisual -->
             <section class="main_visual">
-                <div class="inner">
-                    <div class="slogan">
-                        <h2>ARKO Arts Theater & Daehakro Arts Theater</h2>
-                    </div>
-                    <div class="slide_wrap">
+                <div class="bg">
+                    <div class="inner">
+                        <div class="main_left">
+                            <h2>ARKO Arts Theater & Daehakro Arts Theater</h2>
+                            <div class="showsearch">
+                                <strong>공연 검색</strong>
+                                <form method="get" action="f">
+                                    <input type="text" name="search" placeholder="검색어를 입력해주세요.">
+                                    <button><i class="xi-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
                         <div class="main_slide">
                             <div class="itm">
                                 <figure>
@@ -232,114 +239,160 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="arrows">
+                            <i class="xi-arrow-left left"></i>
+                            <i class="xi-arrow-right right"></i>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 02 진행 중/예정인 공연소개 -->
-            <div class="main_theater section">
+            <!-- 02 main schedule -->
+            <section class="main_schedule">
+                <h2 class="blind">금주의 일정 안내</h2>
                 <div class="content">
-                    <figure class="itm01">
-                        <div class="imgbox">
-                            <img src="./images/theaterList12.jpg" alt="제8회 대한민국장애인국제무용제 KIADA2023-소극장">
+                    <div class="sc_top inner ">
+                        <div class="month">
+                            <b>07</b>
+                            <span>july</span>
                         </div>
-                        <figcaption>
-                            <h3>제8회 대한민국장애인국제무용제 KIADA2023-소극장</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm02">
-                        <div class="imgbox">
-                            <img src="./images/theaterList11.jpg" alt="반쪼가리 자작">
+                        <ul class="sd_day">
+                            <li>
+                                <span>mon</span>
+                                <strong>10</strong>
+                            </li>
+                            <li>
+                                <span>tue</span>
+                                <strong>11</strong>
+                            </li>
+                            <li>
+                                <span>wed</span>
+                                <strong>12</strong>
+                            </li>
+                            <li>
+                                <span>thu</span>
+                                <strong>13</strong>
+                            </li>
+                            <li class="on">
+                                <span>fri</span>
+                                <strong>14</strong>
+                            </li>
+                            <li>
+                                <span>sat</span>
+                                <strong>15</strong>
+                            </li>
+                            <li>
+                                <span>sun</span>
+                                <strong>16</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sc_bottom">
+                        <div class="inner">
+                            <div class="tit">
+                                <h3>ARKO TODAY</h3>
+                                <p>이번달의 공연 스케줄을 보고싶다면, <a href="">이쪽으로</a></p>
+                            </div>
+                            <ul class="sd_show">
+                                <li>
+                                    <div class="not">
+                                        해당 날짜의 공연이 존재하지 않습니다.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="not">
+                                        해당 날짜의 공연이 존재하지 않습니다.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>무용</span>
+                                            <p>2023 제37회 한국현대춤작가 12인전</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>무용</span>
+                                            <p>2023 제37회 한국현대춤작가 12인전</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="on">
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>무용</span>
+                                            <p>2023 모노탄츠 서울</p>
+                                        </a>
+                                    </div>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>연극</span>
+                                            <p>금성 여인숙</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>무용</span>
+                                            <p>2023 모노탄츠 서울</p>
+                                        </a>
+                                    </div>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>무용</span>
+                                            <p>제26회 크리틱스초이스댄스페스티벌<br />&lang;이지민&조혜정 신작 더블빌&rang;</p>
+                                        </a>
+                                    </div>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>연극</span>
+                                            <p>금성 여인숙</p>
+                                        </a>
+                                    </div>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>연극</span>
+                                            <p>2023 아시테지 국제여름축제<br />&lang;해를 낚은 할아버지&rang;</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>무용</span>
+                                            <p>2023 모노탄츠 서울</p>
+                                        </a>
+                                    </div>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>무용</span>
+                                            <p>제26회 크리틱스초이스댄스페스티벌<br />&lang;이지민&조혜정 신작 더블빌&rang;</p>
+                                        </a>
+                                    </div>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>연극</span>
+                                            <p>금성 여인숙</p>
+                                        </a>
+                                    </div>
+                                    <div class="schedule">
+                                        <a href="">
+                                            <span>연극</span>
+                                            <p>2023 아시테지 국제여름축제<br />&lang;해를 낚은 할아버지&rang;</p>
+                                        </a>
+                                    </div>
+                                    <!-- (5,6,7번 li 공통) 하단으로 li코드를 더 써야했지만 코드가 꼬여 div로 기워뒀습니다 -->
+                                </li>
+                            </ul>
                         </div>
-                        <figcaption>
-                            <h3>반쪼가리 자작</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm03">
-                        <div class="imgbox">
-                            <img src="./images/theaterList10.jpg" alt="빨래방:쌉소리">
-                        </div>
-                        <figcaption>
-                            <h3>빨래방:쌉소리</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm04">
-                        <div class="imgbox">
-                            <img src="./images/theaterList09.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜신원민&배진호 신작 더블빌＞">
-                        </div>
-                        <figcaption>
-                            <h3>제26회 크리틱스초이스댄스페스티벌 ＜신원민&배진호 신작 더블빌＞</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm05">
-                        <div class="imgbox">
-                            <img src="./images/theaterList08.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜김주빈&박수윤 신작 더블빌＞">
-                        </div>
-                        <figcaption>
-                            <h3>제26회 크리틱스초이스댄스페스티벌 ＜김주빈&박수윤 신작 더블빌＞</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm06">
-                        <div class="imgbox">
-                            <img src="./images/theaterList07.jpg" alt="2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜타이거＞">
-                        </div>
-                        <figcaption>
-                            <h3>2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜타이거＞</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm07">
-                        <div class="imgbox">
-                            <img src="./images/theaterList06.jpg" alt="2023 아시테지 국제여름축제 [스페인] ＜유리아 : Rain＞
-                            2023.07.21(금) ~ 07.23(일)">
-                        </div>
-                        <figcaption>
-                            <h3>2023 아시테지 국제여름축제 [스페인] ＜유리아 : Rain＞</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm08">
-                        <div class="imgbox">
-                            <img src="./images/theaterList05.jpg" alt="금성 여인숙">
-                        </div>
-                        <figcaption>
-                            <h3>금성 여인숙</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm09">
-                        <div class="imgbox">
-                            <img src="./images/theaterList04.jpg" alt="2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜OH! 타이거＞">
-                        </div>
-                        <figcaption>
-                            <h3>2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜OH! 타이거＞</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm10">
-                        <div class="imgbox">
-                            <img src="./images/theaterList03.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜김용흠&이루마 신작 더블빌＞">
-                        </div>
-                        <figcaption>
-                            <h3>제26회 크리틱스초이스댄스페스티벌 ＜김용흠&이루마 신작 더블빌＞</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm11">
-                        <div class="imgbox">
-                            <img src="./images/theaterList02.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜이지민&조혜정 신작 더블빌＞">
-                        </div>
-                        <figcaption>
-                            <h3>제26회 크리틱스초이스댄스페스티벌 ＜이지민&조혜정 신작 더블빌＞</h3>
-                        </figcaption>
-                    </figure>
-                    <figure class="itm12">
-                        <div class="imgbox">
-                            <img src="./images/theaterList01.jpg" alt="2023 모노탄츠 서울">
-                        </div>
-                        <figcaption>
-                            <h3>2023 모노탄츠 서울</h3>
-                        </figcaption>
-                    </figure>
+                    </div>
                 </div>
-            </div>
-
-            <!-- 03 티켓 오픈 관련 안내 -->
+            </section>
+            <!-- 02-2 티켓 오픈 관련 안내 -->
             <section class="main_ticket section">
                 <div class="title">
                     <h2>티켓 오픈</h2>
@@ -350,41 +403,250 @@
                         <li>
                             <a href="">
                                 <strong>무용</strong>
-                                <p>＜빨래방:쌉소리＞ 예매 오픈 안내</p>
+                                <p>&lang;빨래방:쌉소리&rang; 예매 오픈 안내</p>
                                 <span>2023.07.06</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
                                 <strong>무용</strong>
-                                <p>＜2023년 이철진의 우리춤 큰 판 '법열곡'＞ 예매 오픈 안내</p>
+                                <p>&lang;2023년 이철진의 우리춤 큰 판 '법열곡'&rang; 예매 오픈 안내</p>
                                 <span>2023.07.01</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
                                 <strong>연극</strong>
-                                <p>＜금성 여인숙＞ 예매 오픈 안내</p>
+                                <p>&lang;금성 여인숙&rang; 예매 오픈 안내</p>
                                 <span>2023.06.27</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
                                 <strong>무용</strong>
-                                <p>＜제8회 대한민국장애인국제무용제 KIADA2023＞ 예매 오픈 안내(오픈일 변경)</p>
+                                <p>&lang;제8회 대한민국 장애인 국제무용제 KIADA2023&rang; 예매 오픈 안내 (오픈일 변경)</p>
                                 <span>2023.06.27</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
                                 <strong>무용</strong>
-                                <p>＜제8회 대한민국장애인국제무용제 KIADA2023＞ 예매 오픈 안내</p>
+                                <p>&lang;제8회 대한민국 장애인 국제무용제 KIADA2023&rang; 예매 오픈 안내</p>
                                 <span>2023.06.23</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </section>
+
+            <!-- 03 진행 중/예정인 공연소개 -->
+            <div class="main_theater">
+                <div class="inner content">
+                    <ul class="the_left">
+                        <li class="itm01 on">
+                            <div class="imgbox">
+                                <img src="./images/theaterList12.jpg" alt="제8회 대한민국장애인국제무용제 KIADA2023-소극장">
+                            </div>
+                            <div class="desc">
+                                <strong>제8회 대한민국장애인국제무용제 KIADA2023-소극장</strong>
+                            </div>
+                        </li>
+                        <li class="itm02">
+                            <div class="imgbox">
+                                <img src="./images/theaterList11.jpg" alt="반쪼가리 자작">
+                            </div>
+                            <div class="desc">
+                                <strong>반쪼가리 자작</strong>
+                            </div>
+                        </li>
+                        <li class="itm03">
+                            <div class="imgbox">
+                                <img src="./images/theaterList10.jpg" alt="빨래방:쌉소리">
+                            </div>
+                            <div class="desc">
+                                <strong>빨래방:쌉소리</strong>
+                            </div>
+                        </li>
+                        <li class="itm04">
+                            <div class="imgbox">
+                                <img src="./images/theaterList09.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜신원민&배진호 신작 더블빌＞">
+                            </div>
+                            <div class="desc">
+                                <strong>제26회 크리틱스초이스댄스페스티벌 ＜신원민&배진호 신작 더블빌＞</strong>
+                            </div>
+                        </li>
+                        <li class="itm05">
+                            <div class="imgbox">
+                                <img src="./images/theaterList08.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜김주빈&박수윤 신작 더블빌＞">
+                            </div>
+                            <div class="desc">
+                                <strong>제26회 크리틱스초이스댄스페스티벌 ＜김주빈&박수윤 신작 더블빌＞</strong>
+                            </div>
+                        </li>
+                        <li class="itm06">
+                            <div class="imgbox">
+                                <img src="./images/theaterList07.jpg" alt="2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜타이거＞">
+                            </div>
+                            <div class="desc">
+                                <strong>2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜타이거＞</strong>
+                            </div>
+                        </li>
+                        <li class="itm07">
+                            <div class="imgbox">
+                                <img src="./images/theaterList06.jpg" alt="2023 아시테지 국제여름축제 [스페인] ＜유리아 : Rain＞
+                            2023.07.21(금) ~ 07.23(일)">
+                            </div>
+                            <div class="desc">
+                                <strong>2023 아시테지 국제여름축제 [스페인] ＜유리아 : Rain＞</strong>
+                            </div>
+                        </li>
+                        <li class="itm08">
+                            <div class="imgbox">
+                                <img src="./images/theaterList05.jpg" alt="금성 여인숙">
+                            </div>
+                            <div class="desc">
+                                <strong>금성 여인숙</strong>
+                            </div>
+                        </li>
+                        <li class="itm09">
+                            <div class="imgbox">
+                                <img src="./images/theaterList04.jpg" alt="2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜OH! 타이거＞">
+                            </div>
+                            <div class="desc">
+                                <strong>2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜OH! 타이거＞</strong>
+                            </div>
+                        </li>
+                        <li class="itm10">
+                            <div class="imgbox">
+                                <img src="./images/theaterList03.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜김용흠&이루마 신작 더블빌＞">
+                            </div>
+                            <div class="desc">
+                                <strong>제26회 크리틱스초이스댄스페스티벌 ＜김용흠&이루마 신작 더블빌＞</strong>
+                            </div>
+                        </li>
+                        <li class="itm11">
+                            <div class="imgbox">
+                                <img src="./images/theaterList02.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜이지민&조혜정 신작 더블빌＞">
+                            </div>
+                            <div class="desc">
+                                <strong>제26회 크리틱스초이스댄스페스티벌 ＜이지민&조혜정 신작 더블빌＞</strong>
+                            </div>
+                        </li>
+                        <li class="itm12">
+                            <div class="imgbox">
+                                <img src="./images/theaterList01.jpg" alt="2023 모노탄츠 서울">
+                            </div>
+                            <div class="desc">
+                                <strong>2023 모노탄츠 서울</strong>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <div class="the_right">
+                        <div class="show_slide">
+                            <figure class="itm01">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList12.jpg" alt="제8회 대한민국장애인국제무용제 KIADA2023-소극장">
+                                </div>
+                                <figcaption>
+                                    <strong>제8회 대한민국장애인국제무용제 KIADA2023-소극장</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm02">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList11.jpg" alt="반쪼가리 자작">
+                                </div>
+                                <figcaption>
+                                    <strong>반쪼가리 자작</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm03">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList10.jpg" alt="빨래방:쌉소리">
+                                </div>
+                                <figcaption>
+                                    <strong>빨래방:쌉소리</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm04">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList09.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜신원민&배진호 신작 더블빌＞">
+                                </div>
+                                <figcaption>
+                                    <strong>제26회 크리틱스초이스댄스페스티벌 ＜신원민&배진호 신작 더블빌＞</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm05">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList08.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜김주빈&박수윤 신작 더블빌＞">
+                                </div>
+                                <figcaption>
+                                    <strong>제26회 크리틱스초이스댄스페스티벌 ＜김주빈&박수윤 신작 더블빌＞</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm06">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList07.jpg" alt="2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜타이거＞">
+                                </div>
+                                <figcaption>
+                                    <strong>2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜타이거＞</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm07">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList06.jpg" alt="2023 아시테지 국제여름축제 [스페인] ＜유리아 : Rain＞
+                            2023.07.21(금) ~ 07.23(일)">
+                                </div>
+                                <figcaption>
+                                    <strong>2023 아시테지 국제여름축제 [스페인] ＜유리아 : Rain＞</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm08">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList05.jpg" alt="금성 여인숙">
+                                </div>
+                                <figcaption>
+                                    <strong>금성 여인숙</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm09">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList04.jpg" alt="2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜OH! 타이거＞">
+                                </div>
+                                <figcaption>
+                                    <strong>2023 아시테지 국제여름축제 [영국_스코틀랜드] ＜OH! 타이거＞</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm10">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList03.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜김용흠&이루마 신작 더블빌＞">
+                                </div>
+                                <figcaption>
+                                    <strong>제26회 크리틱스초이스댄스페스티벌 ＜김용흠&이루마 신작 더블빌＞</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm11">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList02.jpg" alt="제26회 크리틱스초이스댄스페스티벌 ＜이지민&조혜정 신작 더블빌＞">
+                                </div>
+                                <figcaption>
+                                    <strong>제26회 크리틱스초이스댄스페스티벌 ＜이지민&조혜정 신작 더블빌＞</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="itm12">
+                                <div class="imgbox">
+                                    <img src="./images/theaterList01.jpg" alt="2023 모노탄츠 서울">
+                                </div>
+                                <figcaption>
+                                    <strong>2023 모노탄츠 서울</strong>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- 04 극장의 공지사항 및 관련 바로가기 리스트 -->
             <section class="main_notice section">
@@ -448,7 +710,42 @@
                     <a href="" class="btmore"><span>전체 보기</span></a>
                 </div>
                 <div class="inner content">
-                    wow
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="xi-instagram"></i>
+                                <div class="imgbox">
+                                    <img src="./images/sns01.jpg" alt="">
+                                </div>
+                                <p>[축제] #축제 #무용극 #공연<br />🌈 [영국_스코틀랜드] ＜OH! 타이거＞🌈<br />🎈장르 : 무용극 🎈단체 : 바로우랜드
+                                    발레<br />스코틀랜드를 대표하는 예술가, 나타샤 길모어와 바로우랜드 발레단이 현대 가족에게 전하는 오렌지🍊빛깔🌈메시지! 흥겨운 춤🎭...
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="xi-instagram"></i>
+                                <div class="imgbox">
+                                    <img src="./images/sns02.jpg" alt="">
+                                </div>
+                                <p>[#무용] #티켓오픈 #접근성<br />[무용] ＜빨래방:쌉소리＞<br />"반복직인 삶의 패턴 안에서 온전희 나를 위한, 나에 의한,나에 대한
+                                    시간"<br />
+                                    공적공간과 사적공간이 함께 공존하는 빨래방의 공간성을 통해 삶의 여유를 느낄수 있는 최소한의 공간과...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="txt">
+                                    <p>더 많은 소식을 듣고 싶다면?</p>
+                                    <figure>
+                                        <img src="./images/mascot.jpg" alt="">
+                                    </figure>
+                                    <span>아르코 SNS 구독하기</span>
+                                </div>
+
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>
@@ -474,8 +771,8 @@
                     <ul class="foot_info">
                         <li>대표자: 정병국 / 사업자번호: 101-82-12824</li>
                         <li>통신판매번호: 2020-서울종로-0588 <a href="">사업자정보확인</a></li>
-                        <li>TEL : 02-3668-0007 화-일 10:00-19:00 (월 휴무)</li>
-                        <li>EMAIL : theater@arko.or.kr</li>
+                        <li>TEL : <a href="tel:02-3668-0007">02-3668-0007</a> 화-일 10:00-19:00 (월 휴무)</li>
+                        <li>EMAIL : <a href="email:theater@arko.or.kr">theater@arko.or.kr</a></li>
                         <li>03086 서울시 종로구 대학로 8길 7 아르코예술극장</li>
                         <li>03086 서울시 종로구 대학로 10길 17 대학로예술극장</li>
                         <li class="copy">Copyright ⓒ Arko & Daehakro Arts Theater All Rights Reserved.</li>

@@ -39,6 +39,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: $c-3;
 }
 
 .title::after {
@@ -55,6 +56,7 @@ body {
 .title h2 {
     font-size: 30px;
     font-weight: 700;
+    font-family: 'GmarketSansMedium';
     text-transform: uppercase;
 }
 

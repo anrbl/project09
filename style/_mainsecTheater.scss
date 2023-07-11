@@ -1,23 +1,43 @@
 .main_theater {
+    position: relative;
 
     .content {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        display: flex;
+        justify-content: flex-end;
         gap: $gap;
-        padding: 0 15rem;
 
-        figure {
+        .the_left {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10rem;
 
-            figcaption {
-                padding: 30rem 20rem;
-                background: $c-wb;
+            li {
+                position: relative;
 
-                h3 {
-                    font-size: 18rem;
-                    font-weight: 500;
-                    line-height: 24rem;
-                    color: $c-4;
+                .imgbox {
+                    filter: grayscale(0.6);
+
+                    img {
+                        width: 100%;
+                        height: 270rem;
+                        object-fit: cover;
+                    }
                 }
+
+                &.on {
+                    .imgbox {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+
+        .the_right {
+            position: sticky;
+            top: 120rem;
+
+            .show_slide {
+                width: 500rem;
             }
         }
     }

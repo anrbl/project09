@@ -1,56 +1,98 @@
 .main_visual {
-    position: relative;
-    z-index: 990;
-    background: url(../images/visualBG.jpg) no-repeat right 90%/cover;
-    height: 750rem;
-    overflow: hidden;
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 0 0;
-        z-index: -1;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%);
-        ;
+    .bg {
+        position: relative;
+        z-index: 990;
+        background: url(../images/visualBG.jpg) no-repeat right 90%/cover;
+        height: 700rem;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 0 0;
+            z-index: -1;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.5) 100%);
+            backdrop-filter: grayscale(0.5);
+        }
     }
 
     .inner {
         position: relative;
-
         display: flex;
         justify-content: space-between;
         height: 100%;
 
-
-        .slogan {
+        .main_left {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
             height: 100%;
 
             h2 {
                 width: 600rem;
-                font-size: 80rem;
+                font-size: 70rem;
                 font-weight: 900;
-                line-height: 80rem;
+                line-height: 70rem;
                 text-transform: uppercase;
                 color: $c-w;
                 margin: 0 0 20rem 0;
+                text-shadow: 0 0 10rem rgba(0, 0, 0, 0.2);
+            }
+
+            .showsearch {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: $gap;
+
+                width: 100%;
+                padding: 20rem 30rem;
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(10rem);
+                border-radius: 10rem;
+                box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
+
+                &>strong {
+                    font-size: 18rem;
+                    font-weight: 500;
+                    user-select: none;
+                }
+
+                input[type="text"] {
+                    width: 380rem;
+                    border: none;
+                    outline: none;
+                    font-size: 12px;
+                    font-family: 'Noto Sans KR';
+                    padding: 5rem 10rem 7rem 10rem;
+                    border-radius: 5rem;
+                    color: $c-9;
+
+                    &:focus {
+                        color: $c-b;
+                    }
+                }
+
+                button {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    font-size: 20px;
+                    vertical-align: middle;
+                    color: $c-b;
+                    margin: 0 0 0 10rem;
+                    cursor: pointer;
+                }
             }
         }
-
     }
-
-    // .mv_slide {
-    //     @include pcen ();
-    //     z-index: 991;
-    //     transform: translate(-50%, calc(-50% + 50rem));
-    //     margin: 0 0 0 400rem;
-    // }
 
     .main_slide {
         position: relative;
         width: 400rem;
-        box-shadow: 0 3rem 10rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
 
         &::after {
             content: "판매진행";
@@ -63,18 +105,16 @@
             text-align: center;
             font-size: 14rem;
             font-weight: 700;
-            background: $c-main;
+            background: $c-sub;
             border-radius: 0 20rem 20rem 0;
-            border: 1px solid $c-2;
+            border: 1px solid $c-b;
         }
 
         .itm {
-            height: 750rem;
+            height: 700rem;
             padding: 30rem;
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10rem);
-            // border-radius: 10rem 10rem 0 0;
-
 
 
             figure {
@@ -84,7 +124,7 @@
 
                 img {
                     width: 100%;
-                    height: 490rem;
+                    height: 440rem;
                     object-fit: cover;
                 }
             }
@@ -125,6 +165,25 @@
                     margin: 0 0 18rem 0;
                 }
             }
+        }
+    }
+
+    .arrows {
+        position: absolute;
+        bottom: 10rem;
+        right: -50rem;
+        z-index: 990;
+
+        i {
+            padding: 15rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            font-size: 20rem;
+            color: $c-w;
+        }
+
+        .left {
+            position: absolute;
+            bottom: 60rem;
         }
     }
 }
