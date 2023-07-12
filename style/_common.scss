@@ -5,7 +5,7 @@
 
 $c-w : #fff;
 $c-wb : #f9f8f7;
-$c-line : #f2f2f2;
+$c-line : #e5e5e5;
 $c-9 : #999;
 $c-6 : #666;
 $c-4 : #444;
@@ -61,4 +61,13 @@ $max : 1200rem;
     padding: 10rem 20rem 8rem 20rem;
     background: $c-2;
     color: $c-main;
+    border-radius: 5rem;
+}
+
+@mixin btnhover() {
+    display: block;
+    padding: 10rem 20rem 8rem 20rem;
+    background: $c-main;
+    color: $c-2;
+    border-radius: 5rem;
 }

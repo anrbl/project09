@@ -37,7 +37,7 @@
                     display: block;
                 }
 
-                &::before {
+                &:not(:first-child):before {
                     content: "";
                     position: absolute;
                     top: 50%;

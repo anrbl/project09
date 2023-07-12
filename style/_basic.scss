@@ -50,7 +50,7 @@ body {
     transform: translate(-50%, 0);
     width: calc(100% - 30rem);
     height: 1px;
-    background: $c-9;
+    background: $c-line;
 }
 
 .title h2 {
@@ -67,6 +67,11 @@ body {
 
 .btn {
     @include btn();
+    transition: 0.5s;
+}
+
+.btn:hover {
+    @include btnhover();
 }
 
 .btmore {
@@ -74,6 +79,7 @@ body {
     position: relative;
     font-size: 16rem;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 .btmore span::after {
@@ -84,4 +90,13 @@ body {
     transform: translate(0, -50%);
     font-size: 15rem;
     color: $c-6;
+    transition: 0.3s;
+}
+
+.btmore:hover {
+    color: $c-9;
+}
+
+.btmore:hover span::after {
+    color: $c-point;
 }
