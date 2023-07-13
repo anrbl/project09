@@ -1,5 +1,5 @@
 .footer {
-    padding: 50rem 0 70rem 0;
+    padding: 50rem 0 60rem 0;
     border-top: 1px solid $c-line;
 
     .ft {
@@ -110,6 +110,75 @@
                 border-radius: 50%;
             }
 
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .footer {
+        padding: 50rem 0 60rem 0;
+
+        .ft {
+
+            display: block;
+            margin: 0 0 70rem 0;
+
+            .foot_logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20rem;
+
+                margin: 0 0 30rem 0;
+
+                &>li {
+                    &>a {
+                        img {
+                            width: 150rem;
+                        }
+                    }
+                }
+            }
+
+            .foot_customer {
+                justify-content: center;
+                gap: 40rem;
+
+                &>li {
+                    position: relative;
+
+
+                    &:not(:first-child):before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: -20rem;
+                        transform: translate(0, -50%);
+                        width: 1px;
+                        height: 12rem;
+                        background: $c-line;
+                    }
+                }
+            }
+
+            &::after {
+                bottom: -35rem;
+            }
+        }
+
+        .fb {
+            display: flex;
+            flex-direction: column;
+            gap: $gap;
+
+            .foot_sns {
+                display: flex;
+                gap: 10rem;
+
+                i {
+                    background: $c-6;
+                }
+            }
         }
     }
 }

@@ -1,5 +1,17 @@
 .main_schedule {
-    background: $c-2 ;
+    position: relative;
+    background: $c-2;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 400rem;
+        clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0% 100%);
+        background: $c-w;
+    }
 
     .content {
         .sc_top {
@@ -94,6 +106,18 @@
                             color: $c-2;
                         }
                     }
+
+                    &:not(:first-child)::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: -2rem;
+                        transform: translate(0, -50%);
+                        width: 3rem;
+                        height: 3rem;
+                        background: $c-4;
+                        border-radius: 50%;
+                    }
                 }
             }
         }
@@ -132,11 +156,15 @@
                 &>li {
                     display: none;
 
+                    .not {
+                        padding: 32rem 0;
+                    }
+
                     .schedule {
                         padding: 26rem 30rem 30rem 30rem;
                         background: $c-w;
                         border-radius: 5rem;
-                        box-shadow: 2px 2px 5rem rgba(0, 0, 0, 0.1);
+                        box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.1);
 
                         span {
                             font-size: 14rem;
@@ -157,6 +185,7 @@
                         display: grid;
                         grid-template-columns: repeat(3, 1fr);
                         gap: $gap;
+
                     }
 
                     /* &.on:nth-child(5),
@@ -170,6 +199,129 @@
                             gap: $gap;
                         }
                     } */
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .main_schedule {
+        &::after {
+            display: none;
+        }
+
+        .content {
+            .sc_top {
+                &::after {
+                    display: none;
+                }
+
+                .sd_day {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 15rem;
+
+                    li {
+                        flex-direction: row-reverse;
+                        gap: 5rem;
+                        justify-content: flex-end;
+
+                        span {
+                            font-size: 10rem;
+                            color: $c-6;
+                        }
+
+                        strong {
+                            font-size: 16rem;
+                            letter-spacing: -0.25rem;
+                        }
+
+                        &.on {
+
+                            &::before {
+                                display: none;
+                            }
+
+                            span {
+                                transform: translate(5rem, 0);
+                                color: $c-line;
+                            }
+
+                            strong {
+                                position: relative;
+                                color: $c-b;
+
+                                &::before {
+                                    content: "";
+                                    @include pcen ();
+                                    z-index: -1;
+                                    width: 30rem;
+                                    height: 30rem;
+                                    border-radius: 50%;
+                                    background: $c-sub;
+                                }
+                            }
+                        }
+
+                        &:not(:first-child)::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .sc_bottom {
+                padding: 40rem 0;
+                width: 100%;
+                min-height: 350rem;
+
+                .tit {
+                    margin: 0 0 30rem 0;
+
+                    p {
+                        font-size: 14rem;
+                        color: $c-6;
+                        text-align: right;
+                    }
+                }
+
+                .sd_show {
+                    &>li {
+                        display: none;
+
+                        .not {
+                            font-size: 14rem;
+                            text-align: center;
+                            padding: 32rem 0;
+                            background: $c-w;
+                            border-radius: 5rem;
+                        }
+
+                        .schedule {
+                            padding: 20rem 24rem 24rem 24rem;
+
+                            span {
+                                font-size: 14rem;
+                                color: $c-point;
+                            }
+
+                            p {
+                                font-size: 18rem;
+                                line-height: 22rem;
+                                font-weight: 500;
+                                color: $c-4;
+                                margin: 10rem 0 0 0;
+                            }
+
+                        }
+
+                        &.on {
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            gap: 10rem;
+                        }
+                    }
                 }
             }
         }

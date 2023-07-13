@@ -1,0 +1,100 @@
+.side {
+    position: fixed;
+    top: 50%;
+    right: 30rem;
+    z-index: 999;
+    transform: translate(0, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+
+    &>div {
+        position: relative;
+        width: 60rem;
+        height: 60rem;
+        text-align: center;
+        background: $c-w;
+        border-radius: 50%;
+        border: 1px solid $c-line;
+        color: $c-6;
+        cursor: pointer;
+        transition: 0.5s;
+
+        .desc {
+            width: 160rem;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            transform: translate(-110rem, -50%);
+
+            font-size: 14rem;
+            line-height: 1;
+            text-align: right;
+            color: $c-9;
+            cursor: default;
+
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+
+        }
+
+        &:hover {
+            border: 1px solid $c-main;
+            background: $c-main;
+            color: $c-w;
+
+            .desc {
+                left: -100%;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+    }
+
+    i {
+        line-height: 58rem;
+        font-size: 24rem;
+        vertical-align: middle;
+    }
+
+    span {
+        font-size: 14rem;
+        line-height: 60rem;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+}
+
+@media (max-width:768px) {
+    .side {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        transform: translate(0, 0);
+
+        flex-direction: row;
+        gap: 0;
+
+        &>div {
+            border-radius: 0;
+        }
+
+        .login {
+            display: none;
+        }
+
+        .vr {
+            display: none;
+        }
+
+        .access {
+            display: none;
+        }
+    }
+}

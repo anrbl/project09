@@ -71,9 +71,11 @@
 
 
 @media (max-width:768px) {
+
     .header {
         position: sticky;
         top: 0;
+        z-index: 1000;
 
         .head_wrap {
             height: 80rem;
@@ -99,7 +101,7 @@
             left: -100%;
             width: 100%;
             height: auto;
-            background: url(../images/visualBG.jpg) no-repeat center bottom;
+            background: url(../images/visualBG.jpg) no-repeat center 80%;
 
             display: block;
             transition: 0.5s;
@@ -115,14 +117,34 @@
                 background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 30%);
             }
 
+            &::after {
+                content: "ARKO Arts Theater & Daehakro Arts Theater";
+                position: absolute;
+                bottom: 140rem;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: calc(100% - 100rem);
+
+
+                font-size: 20rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                text-align: center;
+
+                color: $c-w;
+                text-shadow: 0 0 10rem rgba(0, 0, 0, 0.3);
+                user-select: none;
+
+            }
+
             &>ul {
                 display: flex;
                 flex-direction: column;
                 gap: 0;
-                padding: 100rem 0 0 30rem;
+                padding: 100rem 30rem 0 30rem;
 
                 &>li {
-                    font-size: 18rem;
+                    font-size: 16rem;
                     border-bottom: 1px solid $c-line;
 
                     &>a {

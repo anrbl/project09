@@ -39,6 +39,10 @@ $max : 1200rem;
 // section
 @mixin sec () {
     padding: 100rem 0;
+
+    @media (max-width:768px) {
+        padding: 70rem 0;
+    }
 }
 
 @mixin blind () {
@@ -62,6 +66,15 @@ $max : 1200rem;
     background: $c-2;
     color: $c-main;
     border-radius: 5rem;
+
+
+    @media (max-width:768px) {
+        padding: 8rem 16rem 6rem 16rem;
+        font-size: 14rem;
+        background: $c-2;
+        color: $c-main;
+        border-radius: 5rem;
+    }
 }
 
 @mixin btnhover() {
@@ -70,4 +83,9 @@ $max : 1200rem;
     background: $c-main;
     color: $c-2;
     border-radius: 5rem;
+
+    @media (max-width:768px) {
+        padding: 8rem 16rem 6rem 16rem;
+        font-size: 14rem;
+    }
 }

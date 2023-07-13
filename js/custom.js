@@ -1,4 +1,11 @@
 $(function () {
+    $(window).scroll(function () {
+        let top = $(window).scrollTop();
+    });
+    $('.to_top').on('click', function () {
+        $('html,body').animate({ scrollTop: 0 }, 600);
+    });
+
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
         sct > 0 ? $('.header').addClass('on') : $('.header').removeClass('on');
@@ -23,7 +30,6 @@ $(function () {
         let idx = $(this).index();
         $('.sd_day li').eq(idx).addClass('on').siblings().removeClass('on');
         $('.sd_show li').eq(idx).addClass('on').siblings().removeClass('on');
-        $('.sd_show li:nth-child(6) ul').eq(idx).addClass('on').siblings().removeClass('on');
     });
 
 
@@ -51,5 +57,14 @@ $(function () {
     //mobile
     $('.mmenu').on('click', function () {
         $('.gnb').toggleClass('on');
+    });
+
+    $(window).on('resize', function () {
+        $('.head_customer').removeClass('on');
+    })
+    $('.gnb').on('wheel', function (e) {
+        if ($(this).hasClass('on')) {
+            e.preventDefault();
+        }
     });
 })

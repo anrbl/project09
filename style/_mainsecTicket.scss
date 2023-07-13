@@ -1,4 +1,4 @@
-.main_notice {
+.main_ticket {
     position: relative;
 
     &::after {
@@ -13,17 +13,14 @@
     }
 
     .content {
-        display: grid;
-        grid-template-columns: 1fr 300rem;
-        gap: 10rem;
-
-        .not_left {
+        ul {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10rem;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20rem;
 
             li {
                 border: 1px solid $c-line;
+                width: 100%;
                 height: 250rem;
                 transform: translate(0, 0);
                 transition: 0.5s;
@@ -57,54 +54,24 @@
                         color: $c-9;
                     }
                 }
-            }
-        }
 
-        .not_right {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
-            li {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                outline: 1px solid $c-line;
-                transition: 0.5s;
-
-                a {
-                    display: block;
-                    padding: 20rem;
-
-                    img {
-                        max-width: 110rem;
-                        object-fit: cover;
-                    }
-                }
-
-                &:hover {
-                    background: $c-wb;
-                }
             }
         }
     }
 }
 
 @media (max-width:768px) {
-    .main_notice {
+    .main_ticket {
 
         &::after {
             display: none;
         }
 
         .content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10rem;
-
-            .not_left {
+            ul {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
-                gap: 10rem;
+                gap: 20rem;
 
                 li {
                     height: auto;

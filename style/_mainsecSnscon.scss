@@ -1,0 +1,160 @@
+.main_snscon {
+    background: $c-wb;
+
+    .content {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: $gap;
+
+            li {
+                background: $c-w;
+                border-radius: 5rem;
+                box-shadow: 1rem 1rem 5rem rgba(90, 90, 90, 0.1);
+
+                transform: translate(0, 0);
+                transition: 0.5s;
+
+                &:hover {
+                    transform: translate(0, -10rem);
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+
+                    i {
+                        padding: 10rem;
+                        background: $c-w;
+                        color: $c-9;
+                        font-size: 20rem;
+                        border-radius: 5rem 5rem 0 0;
+                    }
+
+                    .imgbox {
+                        height: 190rem;
+                        overflow: hidden;
+                        margin: 0 0 20rem 0;
+                    }
+
+                    &>p {
+                        font-size: 16rem;
+                        line-height: 22rem;
+                        padding: 10rem 30rem 30rem;
+                    }
+
+                    .txt {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        padding: 30rem;
+
+                        &>p {
+                            font-size: 29rem;
+                            line-height: 34rem;
+                            font-weight: 100;
+                            margin: 0 0 auto 0;
+                        }
+
+                        figure {
+                            width: 200rem;
+                            margin: 0 auto 20rem auto;
+                        }
+
+                        span {
+                            display: inline-block;
+                            text-align: center;
+                            padding: 10rem 15rem 7rem 15rem;
+                            font-size: 14rem;
+                            border: 1px solid $c-9;
+                            color: $c-9;
+                            z-index: 3;
+                            transition: 0.5s;
+                        }
+
+                        &:hover {
+                            figure {
+                                animation: jello-horizontal 1s 0.3s both;
+                            }
+
+                            span {
+                                background: $c-9;
+                                color: $c-w;
+                            }
+                        }
+
+                        @keyframes jello-horizontal {
+                            0% {
+                                transform: scale3d(1, 1, 1)
+                            }
+
+                            30% {
+                                transform: scale3d(1.25, .75, 1)
+                            }
+
+                            40% {
+                                transform: scale3d(.75, 1.25, 1)
+                            }
+
+                            50% {
+                                transform: scale3d(1.15, .85, 1)
+                            }
+
+                            65% {
+                                transform: scale3d(.95, 1.05, 1)
+                            }
+
+                            75% {
+                                transform: scale3d(1.05, .95, 1)
+                            }
+
+                            100% {
+                                transform: scale3d(1, 1, 1)
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .main_snscon {
+        .content {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: $gap;
+
+                li {
+
+                    &:hover {
+                        transform: translate(0, 0);
+                    }
+
+                    a {
+                        &>p {
+                            padding: 10rem 20rem 30rem 20rem;
+                        }
+
+                        .txt {
+                            &:hover {
+                                figure {
+                                    animation: none;
+                                }
+
+                                span {
+                                    background: none;
+                                    color: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

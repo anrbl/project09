@@ -2,6 +2,17 @@
     position: relative;
     background: $c-wb;
 
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 400rem;
+        clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0% 100%);
+        background: $c-w;
+    }
+
     .content {
         max-width: 1440rem;
         display: flex;
@@ -137,6 +148,123 @@
                             &:hover {
                                 background: $c-6;
                                 color: $c-w;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    .main_theater {
+
+        &::after {
+            display: none;
+        }
+
+        .content {
+            display: block;
+            // display: flex;
+            // flex-direction: column-reverse;
+            // gap: 30rem;
+
+            .the_left {
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+                margin: 0 0 30rem 0;
+
+                li {
+                    .imgbox {
+                        img {
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .the_right {
+
+                .show_slide {
+                    width: 100%;
+
+                    figure {
+                        figcaption {
+                            padding: 30rem 0rem;
+
+                            .tag {
+                                display: flex;
+                                gap: 5rem;
+                                margin: 0 0 12rem 0;
+                                font-size: 12rem;
+                                font-weight: 500;
+
+                                &>li {
+                                    padding: 7rem 15rem 5rem 15rem;
+                                    background: $c-6;
+                                    color: $c-wb;
+                                    border-radius: 4rem;
+                                }
+
+                                .dan {
+                                    padding: 7rem 15rem 5rem 15rem;
+                                    background: $c-point;
+                                    color: $c-2;
+                                    border-radius: 4rem;
+                                }
+
+                                .act {
+                                    padding: 7rem 15rem 5rem 15rem;
+                                    background: $c-main;
+                                    color: $c-2;
+                                    border-radius: 4rem;
+                                }
+                            }
+
+                            h3 {
+                                font-size: 22rem;
+                                line-height: 26rem;
+                                font-weight: 700;
+                                margin: 0 0 18rem 0;
+                            }
+
+
+
+                            .des {
+                                margin: 0 0 24rem 0;
+
+                                li {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding: 10rem 0;
+                                    border-bottom: 1px solid $c-line;
+
+                                    font-size: 14rem;
+                                    line-height: 18rem;
+                                    font-weight: 300;
+
+                                    &>strong {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+
+                            a {
+                                display: block;
+                                padding: 10rem 25rem 8rem 25rem;
+                                border: 1px solid $c-6;
+                                color: $c-4;
+                                font-size: 14rem;
+                                border-radius: 5rem;
+                                text-align: center;
+                                transition: 0.5s;
+
+                                &:hover {
+                                    background: $c-6;
+                                    color: $c-w;
+                                }
                             }
                         }
                     }

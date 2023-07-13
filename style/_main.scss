@@ -1,5 +1,4 @@
 .main_visual {
-
     .bg {
         position: relative;
         z-index: 990;
@@ -64,7 +63,7 @@
                     width: 380rem;
                     border: none;
                     outline: none;
-                    font-size: 12px;
+                    font-size: 12rem;
                     font-family: 'Noto Sans KR';
                     padding: 5rem 10rem 7rem 10rem;
                     border-radius: 5rem;
@@ -79,7 +78,7 @@
                     border: none;
                     outline: none;
                     background: transparent;
-                    font-size: 20px;
+                    font-size: 20rem;
                     vertical-align: middle;
                     color: $c-b;
                     margin: 0 0 0 10rem;
@@ -191,12 +190,14 @@
 @media(max-width:768px) {
     .main_visual {
         .bg {
-            height: 1200rem;
-
+            height: 550rem;
         }
 
         .inner {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             z-index: 990;
             background: url(../images/MainVIsual01.jpg) no-repeat center center/cover;
 
@@ -205,7 +206,7 @@
                 position: absolute;
                 inset: 0 0 0 0;
                 z-index: -1;
-                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%);
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(222, 222, 222, 0.7) 100%);
                 backdrop-filter: grayscale(0.5);
             }
 
@@ -214,25 +215,40 @@
                 flex-direction: column;
                 align-items: flex-start;
                 height: auto;
+                margin: 0 0 20rem 0;
 
                 h2 {
                     width: auto;
-                    font-size: 30rem;
+                    font-size: 25rem;
                     line-height: 1;
+                    text-align: center;
                 }
 
                 .showsearch {
                     display: flex;
-                    justify-content: space-around;
-                    gap: 30rem;
+                    justify-content: space-between;
+                    padding: 15rem 25rem;
+                    gap: 20rem;
+
+                    &>strong {
+                        font-size: 16rem;
+                    }
 
                     form {
                         display: flex;
+                        gap: 0;
                     }
 
                     input[type="text"] {
                         max-width: 380rem;
                         width: 100%;
+                    }
+
+                    button {
+                        font-size: 18rem;
+                        padding: 0;
+                        color: $c-6;
+                        margin: 0 0 0 15rem;
                     }
                 }
             }
@@ -247,8 +263,89 @@
             }
 
             .itm {
+                display: grid;
+                grid-template-columns: 150rem 1fr;
+                gap: 10rem;
+                padding: 20rem;
                 height: auto;
+                border-radius: 10rem;
+
+                figure {
+                    margin: 0 0 0 0;
+                    border-radius: 5rem;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 220rem;
+                        object-fit: cover;
+                    }
+                }
+
+                .txt {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    text-align: right;
+                    height: 220rem;
+
+                    h3 {
+                        font-size: 20rem;
+                        font-weight: 700;
+                        margin: 0 0 auto 0;
+
+                        span {
+                            display: block;
+                            font-size: 12rem;
+                            line-height: 16rem;
+                            font-weight: 300;
+                            margin: 0 0 5rem 0;
+                        }
+
+                        strong {
+                            display: inline-block;
+                            font-size: 14rem;
+                            line-height: 18rem;
+                            font-weight: 500;
+                            color: $c-6;
+                        }
+                    }
+
+                    p {
+                        font-size: 12rem;
+                        line-height: 18rem;
+                        color: $c-4;
+                        margin: 0 0 17rem 0;
+                    }
+                }
+            }
+        }
+
+        .arrows {
+            position: absolute;
+            bottom: 20rem;
+            right: 15rem;
+            z-index: 990;
+            // transform: translate(50%, 0%);
+
+            display: flex;
+            gap: 8rem;
+
+            i {
+                padding: 10rem;
+                border: none;
+                font-size: 16rem;
+                background: rgba(255, 255, 255, 0.9);
+                color: $c-6;
+                border-radius: 5rem;
+            }
+
+            .left {
+                position: relative;
+                bottom: auto;
             }
         }
     }
+
 }
