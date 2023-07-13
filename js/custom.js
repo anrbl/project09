@@ -58,13 +58,20 @@ $(function () {
     $('.mmenu').on('click', function () {
         $('.gnb').toggleClass('on');
     });
-
-    $(window).on('resize', function () {
-        $('.head_customer').removeClass('on');
-    })
-    $('.gnb').on('wheel', function (e) {
-        if ($(this).hasClass('on')) {
+    $('.gnb>ul>li>a').on('click', function (e) {
+        if ($('.gnb').hasClass('on')) {
             e.preventDefault();
+            $(this).next().stop().slideToggle();
+            $(this).parent().siblings().find('.sub').stop().slideUp();
         }
+
+        $(window).on('resize', function () {
+            $('.head_customer').removeClass('on');
+        })
+        $('.gnb').on('wheel', function (e) {
+            if ($(this).hasClass('on')) {
+                e.preventDefault();
+            }
+        });
     });
 })

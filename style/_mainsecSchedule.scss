@@ -41,7 +41,7 @@
                 color: $c-2;
                 width: 100rem;
                 height: 100rem;
-                background: $c-line;
+                background: $c-main;
 
 
                 &>b {
@@ -124,7 +124,7 @@
 
         .sc_bottom {
             padding: 50rem 0;
-            background: $c-line;
+            background: $c-main;
             min-height: 440rem;
 
             .tit {

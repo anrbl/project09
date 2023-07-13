@@ -33,6 +33,18 @@
                     line-height: 100rem;
                 }
 
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    width: 0;
+                    height: 5rem;
+                    background: $c-point;
+                    transition: 0.5s;
+                }
+
                 &:not(:first-child)::after {
                     content: "";
                     position: absolute;
@@ -42,6 +54,56 @@
                     width: 1px;
                     height: 10rem;
                     background: $c-line;
+                }
+
+                .sub {
+                    position: absolute;
+                    top: 100rem;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    background: rgba(255, 255, 255, 0.9);
+                    backdrop-filter: blur(10px);
+
+                    width: 200rem;
+                    text-align: center;
+                    padding: 10rem 0;
+                    border-radius: 0 0 5rem 5rem;
+                    border: 1px solid $c-line;
+
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .5s;
+
+                    li {
+                        a {
+                            display: block;
+                            color: $c-2;
+                            font-size: 14rem;
+                            line-height: 40rem;
+                        }
+
+                        &:not(:last-child) {
+                            border-bottom: 1px solid $c-line;
+                        }
+
+                        &:hover {
+                            a {
+                                background: $c-w;
+                                color: $c-point;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+
+                    .sub {
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 }
             }
         }
@@ -58,6 +120,31 @@
                 &>li {
                     &>a {
                         line-height: 70rem;
+                    }
+
+                    .sub {
+                        position: absolute;
+                        top: 70rem;
+
+                        li {
+                            a {
+                                display: block;
+                                color: $c-2;
+                                font-size: 14rem;
+                                line-height: 40rem;
+                            }
+
+                            &:not(:last-child) {
+                                border-bottom: 1px solid $c-line;
+                            }
+
+                            &:hover {
+                                a {
+                                    background: $c-w;
+                                    color: $c-point;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -99,6 +186,7 @@
             top: 0;
             bottom: 0;
             left: -100%;
+            z-index: 980;
             width: 100%;
             height: auto;
             background: url(../images/visualBG.jpg) no-repeat center 80%;
@@ -114,14 +202,16 @@
                 content: "";
                 position: absolute;
                 inset: 0 0 0 0;
-                background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 30%);
+                z-index: -2;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 1) 25%);
             }
 
             &::after {
                 content: "ARKO Arts Theater & Daehakro Arts Theater";
                 position: absolute;
-                bottom: 140rem;
+                bottom: 50rem;
                 left: 50%;
+                z-index: -1;
                 transform: translate(-50%, 0);
                 width: calc(100% - 100rem);
 
@@ -148,11 +238,51 @@
                     border-bottom: 1px solid $c-line;
 
                     &>a {
-                        line-height: 60rem;
+                        line-height: 50rem;
+                    }
+
+                    &::before {
+                        display: none;
                     }
 
                     &:not(:first-child)::after {
                         display: none;
+                    }
+
+                    .sub {
+                        position: static;
+                        top: auto;
+                        left: 0;
+                        right: 0;
+                        z-index: 999;
+                        transform: translate(0, 0);
+                        background: $c-wb;
+                        backdrop-filter: blur(10px);
+
+                        width: auto;
+                        text-align: center;
+                        padding: 0 0;
+                        border-radius: 0;
+                        border: 0 solid var(--lc);
+
+                        opacity: 1;
+                        visibility: visible;
+                        transition: none;
+
+                        display: none;
+
+                        li {
+                            &:not(:last-child) {
+                                border-bottom: 1px solid $c-line;
+                            }
+
+                            &:hover {
+                                a {
+                                    background: none;
+                                    color: none;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -167,7 +297,43 @@
                     &>ul {
                         &>li {
                             &>a {
-                                line-height: 60rem;
+                                line-height: 50rem;
+                            }
+
+                            .sub {
+                                position: static;
+                                top: auto;
+                                left: 0;
+                                right: 0;
+                                z-index: 999;
+                                transform: translate(0, 0);
+                                background: $c-wb;
+                                backdrop-filter: blur(10px);
+
+                                width: auto;
+                                text-align: center;
+                                padding: 0 0;
+                                border-radius: 0;
+                                border: 0 solid var(--lc);
+
+                                opacity: 1;
+                                visibility: visible;
+                                transition: none;
+
+                                display: none;
+
+                                li {
+                                    &:not(:last-child) {
+                                        border-bottom: 1px solid $c-line;
+                                    }
+
+                                    &:hover {
+                                        a {
+                                            background: none;
+                                            color: none;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -180,6 +346,7 @@
             position: fixed;
             top: 30rem;
             right: 30rem;
+            z-index: 1000;
             display: block;
 
             i {
