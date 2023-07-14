@@ -23,7 +23,7 @@ $max : 1200rem;
 
 // 이너
 @mixin inner () {
-    max-width: 1200px;
+    max-width: 1200rem;
     margin: 0 auto;
     padding: 0 15rem;
 }
@@ -55,9 +55,9 @@ $max : 1200rem;
 }
 
 @mixin tit () {
-    max-width: 1200px;
-    margin: 0 auto 38px auto;
-    padding: 0 15px;
+    max-width: 1200rem;
+    margin: 0 auto 38rem auto;
+    padding: 0 15rem;
 }
 
 @mixin btn() {

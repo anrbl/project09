@@ -18,7 +18,7 @@ body {
 }
 
 .inner {
-  max-width: 1200px;
+  max-width: 1200rem;
   margin: 0 auto;
   padding: 0 15rem;
 }
@@ -43,9 +43,9 @@ body {
 
 .title {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto 38px auto;
-  padding: 0 15px;
+  max-width: 1200rem;
+  margin: 0 auto 38rem auto;
+  padding: 0 15rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1010,7 +1010,7 @@ body {
   transition: 0.5s;
 }
 .main_ticket .content ul li:hover {
-  transform: translate(0, -10px);
+  transform: translate(0, -10rem);
 }
 .main_ticket .content ul li a {
   display: flex;
@@ -1297,7 +1297,7 @@ body {
   transition: 0.5s;
 }
 .main_notice .content .not_left li:hover {
-  transform: translate(0, -10px);
+  transform: translate(0, -10rem);
 }
 .main_notice .content .not_left li a {
   display: flex;

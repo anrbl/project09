@@ -65,13 +65,13 @@ $(function () {
             $(this).parent().siblings().find('.sub').stop().slideUp();
         }
 
-        $(window).on('resize', function () {
-            $('.head_customer').removeClass('on');
-        })
-        $('.gnb').on('wheel', function (e) {
-            if ($(this).hasClass('on')) {
-                e.preventDefault();
-            }
-        });
+    });
+    $(window).on('resize', function () {
+        $('.head_customer').removeClass('on');
+    });
+    $('.gnb').on('wheel', function (e) {
+        if ($(this).hasClass('on')) {
+            e.preventDefault();
+        }
     });
 })
